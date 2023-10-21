@@ -1,0 +1,278 @@
+/* form.css */
+.container {
+  /* ... Autres styles ... */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin-top: 80px; */
+}
+
+.form-field {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  justify-content: space-between;
+}
+
+.form-field label {
+  margin-right: 10px;
+  min-width: 120px;
+  text-align: left;
+}
+
+.form-field input[type="text"],
+.form-field input[type="email"],
+.form-field input[type="tel"],
+.form-field input[type="file"],
+.form-field input[type="date"],
+.form-field input[type="password"] {
+  flex: 1;
+}
+
+/* form.css */
+.form-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+}
+
+/* Ajoutez ces classes pour centrer le contenu du formulaire */
+.text-center {
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  /* max-width: 500px; Vous pouvez ajuster cette valeur en fonction de vos besoins */
+  background-color: aliceblue;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.error-message,
+.success-message {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: large;
+  font-weight: bold;
+}
+
+.success-message {
+  color: green;
+}
+
+.error-message {
+  color: red;
+}
+
+.btn-delete {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.img-row {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.custom-modal-content {
+  max-width: 100%;
+  margin: auto;
+}
+
+#btn-page {
+  display: flex;
+  justify-content: center;
+  border-radius: 50px;
+  color: white;
+  background-color: deepskyblue;
+  border: 0px;
+  margin-left: 5px;
+}
+
+/* #btn-page:active {
+  background-color: blue;
+  border: 2px, deepskyblue;
+} */
+
+.pagination {
+  display: flex;
+  align-content: center;
+  align-self: center;
+  justify-content: center;
+}
+
+.image-container {
+  display: flex;
+  background-color: white;
+  align-content: center;
+  text-align: center;
+}
+
+.titre {
+  font-size: xx-large;
+  color: gray;
+  font-style: italic;
+}
+
+.chat-container {
+  align-content: stretch;
+}
+.titre-stade{
+  font-size: xx-large;
+  color: black;
+  font-style: italic;
+}
+
+.titre-stade-container{
+  width: 80%;
+  margin: auto;
+  /* background-color: coral; */
+  border-radius: 2%;
+  margin-bottom: 8px;
+  align-self: center;
+}
+
+.active-btn, .notActive{
+  width: 40px;
+  border-radius: 40%;
+  color: white;
+  background-color: blue;
+  border: solid 1px gray;
+}
+
+.active-btn{
+  color: lightcyan;
+  background-color: darkblue;
+  border: solid 1px gray;
+}
+.img-row {
+  width: 90%;
+  margin: auto;
+  border-radius: 2%;
+  /* border: solid 4px gray; */
+  justify-content: center;
+  align-self: center;
+  padding: 5px;
+  /* background-color: khaki; */
+}
+
+.img-stade{
+  box-shadow: 10px 5px 5px grey;
+  border-radius: 2%;
+}
+.pagination-container{
+  width: 85%;
+  margin: auto;
+  align-self: center;
+  padding: 10px;
+}
+.button:hover {
+  background-color: lightgray;
+}
+
+.cell-with-events {
+  /* Styles pour les cellules contenant au moins un événement */
+  background-color: red;
+}
+
+.title-rdv {
+  align-self: center;
+  font-size: 60px;
+  padding: auto;
+  color: white;
+
+}
+
+.title-container {
+  justify-content: center;
+  margin-bottom: 20px;
+  text-align: center;
+  /* background-image: linear-gradient(#cce4f2, #a7ccf8, #89CCF6); */
+  background-color: #2a52a2;
+  width: 100%;
+  border-radius: 5%;
+  border: 5px white;
+}
+
+.rdv-container {
+  /* width: 90%;
+  margin: auto;
+  align-self: center; */
+}
+
+.btn-rdv {
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 55%;
+  margin-bottom: 20px;
+}
+
+.main-container-rdv{
+  width: 90%;
+  margin: auto;
+  align-self: center;
+  margin-top: 10px;
+  /* border: solid 5px; */
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 2%;
+  /* background-color: dodgerblue; */
+
+}
+
+.day-title,.hour-title{
+  color: black;
+  align-self: center;
+  text-align: center;
+}
+.day-button, .selected, .notSelected{
+  width: 80px;
+  border-radius: 15%;
+  margin: 2px;
+  justify-content: center;
+}
+
+.button-container, .hour-container{
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+  align-content: center;
+  border: solid 1px;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 2%;
+  background-color: white;
+}
+
+.selected{
+  background-color: blue;
+  color: lightcyan;
+}
+
+.hour-selected{
+  font-size: large;
+  font-weight: 600;
+}
+.modal-container{
+  position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    display: flex !important;
+    justify-content: center !important; /* Centrer horizontalement */
+    align-items: center !important; /* Centrer verticalement */
+    z-index: 9999 !important;
+    padding: 20px !important;
+    padding-left: 20px !important;
+}
