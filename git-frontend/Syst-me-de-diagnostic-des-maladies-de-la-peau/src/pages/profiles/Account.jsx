@@ -38,7 +38,8 @@ export default function Account() {
                 <MDBRow className="g-0">
                   <MDBCol md="4" className="gradient-custom text-center text-white"
                     style={{ borderTopLeftRadius: '.5rem', borderBottomLeftRadius: '.5rem' }}>
-                    <MDBCardImage src={`${path}/uploads/${user.photo}`}
+                    <MDBCardImage src={user.photo!='photo' ? `${path}/uploads/${user.photo}` : 'https://www.unamur.be/sciences/chimie/cbo/members/membres-fichiers/anonymity.jpg/image'}
+  
                       alt={user.photoName} className="my-5 cercle" style={{ width: '80px', borderRadius: "50%" }} fluid />
                     <MDBTypography tag="h5">{user.nom} {user.prenom}</MDBTypography>
                     <MDBCardText>{user.role[0]}</MDBCardText>

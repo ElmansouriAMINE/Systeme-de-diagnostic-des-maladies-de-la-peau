@@ -104,14 +104,14 @@ function Stades() {
                     </td>
                     <td>
                     <span>
-                        <button className='elt-btn btn btn-dark' title='detail' onClick={() => fdetail(stade._id)}>
+                        <button className='btn btn-dark' title='detail' onClick={() => fdetail(stade._id)}>
                           <FontAwesomeIcon icon={faThLarge} />
                         </button>
                       </span>
                     </td>
                     <td>
                       <span>
-                        <button className='elt-btn btn btn-danger display-flex' title='delete' onClick={() => fdelete(stade._id)}>
+                        <button className='btn btn-danger display-flex' title='delete' onClick={() => fdelete(stade._id)}>
                           <FontAwesomeIcon icon={faTrashAlt} />
                         </button>
                       </span>

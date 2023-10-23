@@ -4,7 +4,7 @@ import { calculateRange, sliceData } from '../../utils/table-pagination';
 import '../styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faEdit, faTrashAlt, faClipboardUser, faSuitcaseMedical, faLungsVirus } from '@fortawesome/free-solid-icons';
-import { faEdit, faTrashAlt, faClipboardUser, faSuitcaseMedical, faLungsVirus } from '@fortawesome/free-solid-svg-icons';
+import { faEdit, faTrashAlt, faClipboardUser, faBriefcaseMedical,faSuitcaseMedical, faLungsVirus } from '@fortawesome/free-solid-svg-icons';
 import { useUserData } from '../../contexts/UserDataContext';
 import Form__delete_consultation from '../../components/form/form_delete_consult';
 import Transition from '../../constants/transition';
@@ -179,14 +179,16 @@ function TodayConsultations() {
                     </td>
                     <td>
                       <span>
-                        <button className='elt-btn btn btn-danger display-flex' title='deletion' onClick={() => fdelete(consultation._id)}>
+                        <button className='btn btn-danger display' title='deletion' onClick={() => fdelete(consultation._id)}>
                           <FontAwesomeIcon icon={faTrashAlt} />
                         </button>
                       </span>
                       {userData.role.includes('medecin') && !userData.role.includes('admin') && (
-                        <span>
-                          <button className='elt-btn btn btn-dark' title='diagnostics' onClick={() => fdiagnostics(consultation._id)}>
-                            <FontAwesomeIcon icon={faClipboardUser} />
+                        <span style={{ marginLeft: '5px' }}>
+                          <button className='btn btn-success' title='diagnostics' onClick={() => fdiagnostics(consultation._id)}>
+                            {/* <FontAwesomeIcon icon={faClipboardUser} /> */}
+                            <FontAwesomeIcon icon={faBriefcaseMedical} />
+                            {/* <FontAwesomeIcon icon="fa-solid fa-briefcase-medical" /> */}
                           </button>
                         </span>
                       )}

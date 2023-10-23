@@ -61,7 +61,7 @@ export default function DossierMedical() {
                     style={{ width: '120px' }}
                     fluid />
                   <p className="text-muted mb-1">{patient.role[0]}</p>
-                  <p className="text-muted mb-4">{patient.nom} {patient.prenom}</p>
+                  <p className="text-muted mb-4">{patient?.nom} {patient?.prenom}</p>
                   <div className="d-flex justify-content-center mb-2">
                     <MDBBtn>Profil</MDBBtn>
                     <MDBBtn outline className="ms-1">Message</MDBBtn>

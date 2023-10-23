@@ -44,7 +44,7 @@ function Diagnostics() {
         const timeout = setTimeout(() => {
         setShowProgress(false);
         setShowText(true);
-      }, 100000); 
+      }, 10000); 
       return () => {
         clearTimeout(timeout); 
       };
@@ -191,26 +191,26 @@ function Diagnostics() {
                                             <span>{diagnostic.probability ? `${diagnostic.probability}%` : "Nothing"}</span>
                                         </td>
                                         <td>
-                                            <img src={`http://192.168.11.104:5000/uploads/${diagnostic.imagePath}`} alt={diagnostic.imageName} width={50} height={50} />
+                                            <img src={`http://localhost:5000/uploads/${diagnostic.imagePath}`} alt={diagnostic.imageName} width={50} height={50} />
                                         </td>
                                         <td>
                                             <span>
-                                                <button className='elt-btn btn btn-primary' title='edit' onClick={() => fupdate(diagnostic._id)}>
+                                                <button className='btn btn-primary' title='edit' onClick={() => fupdate(diagnostic._id)}>
                                                     <FontAwesomeIcon icon={faEdit} />
                                                 </button>
                                             </span>
-                                            <span>
-                                                <button className='elt-btn btn btn-danger display-flex' title='deletion' onClick={() => fdelete(diagnostic._id)}>
+                                            <span style={{ marginLeft: '5px' }}>
+                                                <button className='btn btn-danger display-flex' title='deletion' onClick={() => fdelete(diagnostic._id)}>
                                                     <FontAwesomeIcon icon={faTrashAlt} />
                                                 </button>
                                             </span>
-                                            <span>
-                                                <button className='elt-btn btn btn-dark' title='details of the diagnostic' onClick={() => fdetails(diagnostic._id)}>
+                                            <span style={{ marginLeft: '5px' }}>
+                                                <button className='btn btn-dark' title='details of the diagnostic' onClick={() => fdetails(diagnostic._id)}>
                                                     <FontAwesomeIcon icon={faClipboardUser} />
                                                 </button>
                                             </span>
-                                            <span>
-                                                <button className='elt-btn btn btn-success' title='valider diagnostic' onClick={() => fvalider(diagnostic._id)}>
+                                            <span style={{ marginLeft: '5px' }}>
+                                                <button className='btn btn-success' title='valider diagnostic' onClick={() => fvalider(diagnostic._id)}>
                                                     <FontAwesomeIcon icon={faLungsVirus} />
                                                 </button>
                                             </span>
@@ -243,12 +243,12 @@ function Diagnostics() {
                                     <CircularProgress />
                                     </Box>
                                 )}
-                                                {showText && <Box display="flex" justifyContent="center">
+                                                {/* {showText && <Box display="flex" justifyContent="center">
                                     <Typography variant="body1">
                                     Le chargement est terminé ! Aucune information trouvée
                                     </Typography>
                                     </Box>
-                                    }
+                                    } */}
                                             </div>
                             )}
                     </div>
